@@ -1,13 +1,16 @@
 # Core packages
-`dbverse` currently consists of four core libraries that contain classes, generics, and methods for representing and analyzing scientific data objects in a `DuckDB` database.
+`dbverse` currently consists of four core packages that contain classes, generics, and methods for representing and analyzing scientific data objects in a `DuckDB` database.
 
-1.  [`{dbMatrix}`](https://drieslab.github.io/dbMatrix) - A library for sparse/dense matrix operations in a database.
-2.  [`{dbSpatial}`](https://drieslab.github.io/dbSpatial) - A library for spatial operations in a database.
-3.  `{dbData}` - A library with specifications for base class of `dbverse`. **In progress**.
-4.  `{dbSequence}` - A library for genomic sequence operations in a database. **In progress**.
+1.  [`{dbmatrix-r}`](https://github.com/dbverse-org/dbmatrix-r) - Database-backed operations for sparse and dense matrices
+2.  [`{dbspatial-r}`](https://github.com/dbverse-org/dbspatial-r) - Database-backed operations for spatial geometries
+3.  [`{dbproject-r}`](https://github.com/dbverse-org/dbproject-r) - Database connection management utilities and base class definitions for `dbverse` objects.
+4.  `{dbsequence-r}` - Database-backed operations for biological sequence analysis  **(Incubating)**.
+5.  `{mosaicShiny}` - Database-backed visualizations leveraging [uwdata/mosaic](https://github.com/uwdata/mosaic) in R **(Incubating)**.
 
 # Extensions
-R Packages that use `dbverse`. *Want to be added to this list? Please submit an issue or pull request on our Github.*
+Packages leveraging `dbverse`.
 
+- [GiottoDB](https://github.com/dbverse-org/GiottoDB)
+    - Database-backed operations for spatial omics data analysis.
 - [Giotto](https://github.com/drieslab/Giotto)
     - A comprehensive spatial transcriptomic analysis toolbox.

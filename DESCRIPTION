@@ -11,7 +11,7 @@ License: GPL3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
-URL: https://github.com/Ed2uiz/dbverse, https://ed2uiz.github.io/dbverse/
-BugReports: https://github.com/Ed2uiz/dbverse/issues
+URL: https://github.com/dbverse-org/dbverse, https://dbverse-org.github.io/dbverse/
+BugReports: https://github.com/dbverse-org/dbverse/issues
 Depends:
     R (>= 4.1.0)

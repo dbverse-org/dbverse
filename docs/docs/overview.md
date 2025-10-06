@@ -7,8 +7,8 @@
 classDiagram
 direction LR
 
-namespace Input_Data {
-    class matrices{
+namespace Scientific-Data {
+    class Tabular{
         .mtx
         .csv
         .parquet
@@ -18,13 +18,13 @@ namespace Input_Data {
         data.table
     }
 
-    class geometries{
+    class Geometries{
         50+ spatial file formats
         sf::sf
         terra::spatVector
     }
 
-    class sequences{
+    class Biological-Sequences{
         10+ genomic file formats
     }
 }
@@ -34,68 +34,77 @@ namespace computer {
 }
 
 namespace dbverse {
-    class dbMatrix_lib{
+    class dbmatrix-r{
         class dbMatrix
     }
 
-    class dbSpatial_lib{
+    class dbspatial-r{
         class dbSpatial
     }
 
-    class dbSequence_lib{
+    class dbsequence-r{
         class dbSequence
     }
 
-    class dbData_lib{
+    class dbproject-r{
         class dbData
     }
 }
 
-namespace dbMatrix_lib {
+namespace dbmatrix-r {
     class dbMatrix {
-        + dbData: dbData
-        + dim_names: [enum,enum]
-        + dims: [int, int]
-        + class: "dbSparseMatrix" | "dbDenseMatrix"
+        <<S4 Class>>
+        + value: tbl_duckdb_connection
+        + name: character
+        + dim_names: list
+        + dims: integer
+        + init: logical
         - Arith()
-        - Ops() 
-        - matrix summary functions()
+        - Ops()
+        - Math()
+        - Summary()
+        - Matrix::
+        - matrix::
     }
 }
 
-namespace dbSpatial_lib {
+namespace dbspatial-r {
     class dbSpatial{
-        + dbData: dbData
+        <<S4 Class>>
+        + value: tbl_duckdb_connection
+        + name: character
         - ST_*(geom) [DuckDB Spatial Extension]
     }
 }
 
-namespace dbSequence_lib {
+namespace dbsequence-r {
     class dbSequence{
-        + dbData: dbData
+        <<S4 Class>>
+        + value: tbl_duckdb_connection
+        + name: character
     }
 }
 
-namespace dbData_lib {
+namespace dbproject-r {
     class dbData {
         <<base virtual class>>
-        + value: Input_Data
-        + name: table_name
-        + init: boolean
-        + conn: DuckDB connection
+        + value: ANY (tbl_sql)
+        + name: character
         - DBI::()
         - dplyr::()
+        - dbReconnect()
+        - autoreconnection()
     }
 }
 
-matrices <..> dbMatrix_lib : read/write
-geometries <..> dbSpatial_lib : read/write
-sequences <..> dbSequence_lib : read/write
+Tabular <..> dbmatrix-r : read/write
+Geometries <..> dbspatial-r : read/write
+Biological-Sequences <..> dbsequence-r : read/write
 
-dbMatrix_lib --> dbData_lib
-dbSpatial_lib --> dbData_lib
-dbSequence_lib --> dbData_lib
+dbmatrix-r --> dbproject-r
+dbspatial-r --> dbproject-r
+dbsequence-r --> dbproject-r
 
-dbData_lib <..> database : connect/disconnect/cache
+dbproject-r <..> database : connect/disconnect/cache
 ```
 

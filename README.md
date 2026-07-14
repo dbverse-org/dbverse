@@ -1,6 +1,3 @@
-
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
 # `dbverse`
 
 <!-- badges: start -->
@@ -12,16 +9,23 @@ Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](c
 
 <!-- badges: end -->
 
-**Note: work in progress**
+`dbverse` is an ecosystem of libraries for larger-than-memory scientific data
+analysis built on embedded analytical databases and query engines such as
+DuckDB and DataFusion. It provides database-backed representations for common
+scientific data structures and exposes them through familiar scientific APIs.
 
-The `dbverse` is an ecosystem of open-source and composable database
-libraries for larger-than-memory scientific data analysis. The `dbverse`
-provides object relational mappings for common scientific data objects,
-including sparse and dense matrices, spatial geometries, and others, and
-is powered by DuckDB.
+The current implementation is centered on R. Python and Julia APIs are
+incubating.
 
-The goal of `dbverse` is to enable larger-than-memory scientific data
-analysis across programming languages with databases. Please visit the
-packages page for details about each `dbverse` package. On release, the
-`dbverse` is compatible with R with support for other languages planned
-in the future.
+## Documentation
+
+Visit the [dbverse documentation](https://dbverse-org.github.io/dbverse/) for
+concepts, architecture, package information, and troubleshooting guidance.
+
+## Documentation development
+
+```sh
+cd docs-vitepress
+npm install
+npm run docs:dev
+```

@@ -41,10 +41,10 @@
     </div>
   </article>
   <article class="package-card">
-    <h3>dbVisuals <span class="package-status">(incubating)</span></h3>
-    <p>Visualization workspace for database-backed data.</p>
+    <h3><a href="https://github.com/dbverse-org/dbVisuals">dbVisuals</a></h3>
+    <p>Linked, interactive visualizations of database-backed and tabular data, in R and in the <a href="https://dbvisuals.pages.dev">web app</a>.</p>
     <div class="package-languages" aria-label="Language availability">
-      <span class="language-logo language-logo-r is-incubating" aria-label="R incubating" title="R incubating"><img src="/assets/languages/r.svg" alt=""></span>
+      <a class="language-logo language-logo-r" href="https://github.com/dbverse-org/dbVisuals" aria-label="dbVisuals R source" title="dbVisuals R source"><img src="/assets/languages/r.svg" alt="R"></a>
       <span class="language-logo language-logo-python is-incubating" aria-label="Python incubating" title="Python incubating"><img src="/assets/languages/python.svg" alt=""></span>
       <span class="language-logo language-logo-julia is-incubating" aria-label="Julia incubating" title="Julia incubating"><img src="/assets/languages/julia.svg" alt=""></span>
     </div>

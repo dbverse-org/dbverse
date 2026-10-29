@@ -22,6 +22,7 @@ APIs. The current implementation is centered on R.
 | `dbMatrix` | Sparse and dense matrix objects backed by analytical databases. |
 | `dbSpatial` | Spatial geometries and operations backed by analytical databases. |
 | `dbSequence` | Lazy genomic data ingestion, interval filtering, and coverage workflows. |
+| `dbVisuals` | Linked, interactive visualizations of database-backed and tabular data. |
 
 ## Installation
 
@@ -34,7 +35,8 @@ pak::pak(c(
   "dbverse-org/dbproject-r",
   "dbverse-org/dbmatrix-r",
   "dbverse-org/dbspatial-r",
-  "dbverse-org/dbsequence-r"
+  "dbverse-org/dbsequence-r",
+  "dbverse-org/dbVisuals/r-package"
 ))
 ```
 
